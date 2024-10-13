@@ -6,8 +6,8 @@
   :root {
     --background: 27 27 27;
     --foreground: 225 225 225;
-    --muted: 115 115 115;
-    --accent: 254 254 91;
+    --muted: 54, 64, 252;
+    --accent: 21, 69, 241;
     /* hex value of rgb(254,254,91) color is  #FEFE5B  */
   }
 }
