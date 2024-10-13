@@ -21,7 +21,7 @@ module.exports = {
       },
       boxShadow:{
         'glass-inset': 'inset 0 17px 5px -9px rgba(254,254,91, 0.05)',
-        'glass-sm': '5px 5px 20px 0px rgba(254,254,91, 0.3)',
+        'glass-sm': '5px 5px 20px 0px rgba(14, 250, 5, 0.3)',
       },
       keyframes:{
       'spin-reverse':{

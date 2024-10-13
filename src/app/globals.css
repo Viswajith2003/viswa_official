@@ -6,7 +6,7 @@
   :root {
     --background: 27 27 27;
     --foreground: 225 225 225;
-    --muted: 54, 64, 252;
+    --muted: 115 115 115;
     --accent: 21, 69, 241;
     /* hex value of rgb(254,254,91) color is  #FEFE5B  */
   }
@@ -18,7 +18,7 @@
   }
 
   .custom-bg {
-    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-sm;
   }
 }
 
