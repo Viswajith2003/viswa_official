@@ -17,8 +17,8 @@ export default function Home() {
           <p className="md:text-3xl text-2xl ">Hi, I'm</p>
           <p className="md:text-8xl text-5xl font-bold">Viswajith.</p>
           <div className="flex space-x-3">
-            <IoCodeSlashSharp className="text-blue-600 md:text-5xl text-2xl" />
-            <div className="md:text-4xl text-2xl text-blue-600 mt-1">
+            <IoCodeSlashSharp className="text-blue-600 md:text-5xl text-2xl mt-1 md:mt-0" />
+            <div className="md:text-4xl text-2xl text-blue-600 md:mt-1 ">
               <Typewriter
                 options={{
                   strings: ["Full-stack developer", "UI/UX designer", "Dancer"],
