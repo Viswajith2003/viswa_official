@@ -1,11 +1,12 @@
 import {
   Github,
   Home,
+  Youtube,
   Linkedin,
   NotebookText,
   Palette,
   Phone,
-  Twitter,
+  Instagram,
   User,
 } from "lucide-react";
 import Link from "next/link";
@@ -15,27 +16,18 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 
 const getIcon = (icon) => {
-  switch (icon) {
-    case "home":
-      return <Home className="w-full h-auto" strokeWidth={1.5} />;
-    case "about":
-      return <User className="w-full h-auto" strokeWidth={1.5} />;
-    case "projects":
-      return <Palette className="w-full h-auto" strokeWidth={1.5} />;
-    case "contact":
-      return <Phone className="w-full h-auto" strokeWidth={1.5} />;
-    case "github":
-      return <Github className="w-full h-auto" strokeWidth={1.5} />;
-    case "linkedin":
-      return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
-    case "twitter":
-      return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
-    case "resume":
-      return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
+  const icons = {
+    home: <Home className="w-full h-auto" strokeWidth={1.5} />,
+    about: <User className="w-full h-auto" strokeWidth={1.5} />,
+    projects: <Palette className="w-full h-auto" strokeWidth={1.5} />,
+    contact: <Phone className="w-full h-auto" strokeWidth={1.5} />,
+    github: <Github className="w-full h-auto" strokeWidth={1.5} />,
+    linkedin: <Linkedin className="w-full h-auto" strokeWidth={1.5} />,
+    youtube: <Youtube className="w-full h-auto" strokeWidth={1.5} />,
+    instagram: <Instagram className="w-full h-auto" strokeWidth={1.5} />,
+  };
 
-    default:
-      return <Home className="w-full h-auto" strokeWidth={1.5} />;
-  }
+  return icons[icon] || <Home className="w-full h-auto" strokeWidth={1.5} />;
 };
 
 const item = {

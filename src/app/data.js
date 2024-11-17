@@ -96,28 +96,26 @@ export const BtnList = [
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
   {
     label: "Github",
-    link: "https://www.github.com/codebucks27",
+    link: "https://github.com/Viswajith2003",
     icon: "github",
     newTab: true,
   },
   {
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/codebucks",
+    link: "https://www.linkedin.com/in/viswajith-vp-b845a8242/",
     icon: "linkedin",
     newTab: true,
   },
   {
-    label: "X",
-    link: "https://www.x.com/code_bucks",
-    icon: "twitter",
+    label: "Youtube",
+    link: "https://www.youtube.com/@viswajith-viswa03",
+    icon: "youtube",
     newTab: true,
   },
   {
-    label: "Resume",
-    link: "/resume.pdf",
-    icon: "resume",
+    label: "Instagram",
+    link: "https://www.instagram.com/viswajith_viswa03/",
+    icon: "instagram",
     newTab: true,
   },
 ];
-
-
