@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 27 27 27;
+    --background: 0 0 0;
     --foreground: 225 225 225;
     --muted: 115 115 115;
     --accent: 21, 69, 241;
@@ -31,6 +31,7 @@
   }
 }
 
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -45,3 +46,5 @@
   animation: scroll 20s linear infinite;
   white-space: nowrap;
 }
+
+

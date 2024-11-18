@@ -3,6 +3,7 @@ import "./globals.css";
 import clsx from "clsx";
 import FireFliesBackground from "@/components/FireFliesBackground";
 import Sound from "@/components/Sound";
+import StarField from "@/components/starfield/StarField";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,13 +12,9 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    template:
-      "Next.js Portfolio Created with Three.js and Tailwind CSS | %s | CodeBucks",
-    default:
-      "Next.js Portfolio Created with Three.js and Tailwind CSS by CodeBucks",
+    template: "Viswajith V P | %s",
+    default: "Viswajith V P",
   },
-  description:
-    "A unique creative portfolio designed by CodeBucks with cutting-edge technologies like Next.js, Tailwind CSS, Three.js, and Framer Motion. Experience the art of modern web development firsthand. Checkout CodeBucks on youtube.",
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +28,7 @@ export default function RootLayout({ children }) {
       >
         {children}
         <FireFliesBackground />
+        <StarField />
         <Sound />
         <div id="my-modal" />
       </body>

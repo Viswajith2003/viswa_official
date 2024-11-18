@@ -1,5 +1,8 @@
+"use client";
+import clsx from "clsx";
 import React from "react";
-// import ItemLayout from "./ItemLayout";
+import { motion } from "framer-motion";
+import StarField from "../../components/starfield/StarField";
 import TechStack from "./ItemLayout";
 import Link from "next/link";
 import {
@@ -14,82 +17,106 @@ import {
 const AboutDetails = () => {
   return (
     <section className="w-full m-8">
+      <StarField />
       <div className="flex space-x-6 w-full">
-        {/* left part */}
-        <div className="flex flex-col space-y-5 w-1/4">
+        {/* Left part */}
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className={clsx(
+            "flex flex-col space-y-5 w-1/4",
+            "border-[1px] border-yellow-400 hover:border-blue-500 p-5 rounded-md shadow-md shadow-blue-400"
+          )}
+        >
           <div className="mb-8">
             <img
-              src="/profile.jpg" // Replace with the path to your profile photo
+              src="/profile.jpg"
               alt="Profile photo"
-              className="ml-10 w-72 h-72 rounded-full border-4 border-yellow-400 hover:border-blue-500 object-cover shadow-lg"
+              className="ml-8 w-72 h-72 rounded-full border-4 border-white shadow-lg shadow-blue-400  hover:border-blue-500 object-cover "
             />
           </div>
-          <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md text-center">
+          <div className="mb-8 text-center">
             <h2 className="text-2xl font-bold">Tech Enthusiast & Developer</h2>
             <p className="text-slate-400 font-light text-md">
               Excited about creating solutions and learning new technologies.
             </p>
           </div>
-          <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md h-full">
-            <h1 className="text-2xl font-bold">Let's connect with:</h1>
+          <div className="border-[1px]  border-yellow-400 shadow-blue-400 hover:border-blue-500 p-5 rounded-md h-full ">
+            <h1 className="text-2xl font-bold ">Let's connect with:</h1>
             <br />
-            <div>
-              <div className="items-center space-y-2">
-                <Link href="https://www.youtube.com/" className="flex">
-                  <AiOutlineMail className="text-4xl text-blue-600" />
-                  <p className="text-xl ml-3 hover:text-cyan-400">
-                    viswajithviswa715@gmail.com
+            <div className="items-center space-y-3 animate-pulse">
+              {[
+                {
+                  href: "mailto:viswajithviswa715@gmail.com",
+                  icon: AiOutlineMail,
+                  text: "viswajithviswa715@gmail.com",
+                  color: "text-blue-300",
+                },
+                {
+                  href: "tel:+919072906576",
+                  icon: AiOutlinePhone,
+                  text: "+91 9072906576",
+                  color: "text-green-500",
+                },
+                {
+                  href: "https://www.youtube.com/",
+                  icon: AiFillYoutube,
+                  text: "Viswajith_Viswa03",
+                  color: "text-red-500",
+                },
+                {
+                  href: "https://www.linkedin.com/",
+                  icon: AiFillLinkedin,
+                  text: "VISWAJITH V P",
+                  color: "text-sky-500",
+                },
+                {
+                  href: "https://www.instagram.com/",
+                  icon: AiFillInstagram,
+                  text: "viswajith_viswa03",
+                  color: "text-pink-500",
+                },
+                {
+                  href: "https://www.github.com/",
+                  icon: AiFillGithub,
+                  text: "viswajith2003",
+                  color: "text-white",
+                },
+              ].map(({ href, icon: Icon, text, color }, index) => (
+                <Link href={href} className="flex" key={index}>
+                  <Icon className={color + " text-3xl"} />
+                  <p
+                    className={"text-xl ml-3 " + color + " hover:text-cyan-400"}
+                  >
+                    {text}
                   </p>
                 </Link>
-                <Link href="https://www.youtube.com/" className="flex">
-                  <AiOutlinePhone className="text-4xl text-green-600" />
-                  <p className="text-xl ml-3 hover:text-cyan-400">
-                    +91 9072906576
-                  </p>
-                </Link>
-                <Link href="https://www.youtube.com/" className="flex">
-                  <AiFillYoutube className="text-4xl text-red-600" />
-                  <p className="text-xl ml-3 mt-2 hover:text-cyan-400">
-                    Viswajith_Viswa03
-                  </p>
-                </Link>
-                <Link href="https://www.linkedin.com/" className="flex">
-                  <AiFillLinkedin className="text-4xl text-blue-400" />
-                  <p className="text-xl ml-3 mt-2 hover:text-cyan-400">
-                    VISWAJITH V P
-                  </p>
-                </Link>
-                <Link href="https://www.instagram.com/" className="flex">
-                  <AiFillInstagram className="text-4xl text-pink-600" />
-                  <p className="text-xl ml-3 mt-2 hover:text-cyan-400">
-                    viswajith_viswa03
-                  </p>
-                </Link>
-                <Link href="https://www.github.com/" className="flex">
-                  <AiFillGithub className="text-4xl text-slate-50" />
-                  <p className="text-xl ml-3 mt-2 hover:text-cyan-400">
-                    viswajith2003
-                  </p>
-                </Link>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* right part */}
-        <div className="flex flex-1 space-x-4">
+        {/* Right part */}
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-1 space-x-4"
+        >
           <div className="flex flex-col space-y-4 w-2/3">
-            <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md h-1/3">
+            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md h-1/3 ">
               <h2 className="mb-2 font-bold text-2xl">README :</h2>
               <p className="text-slate-400 font-light text-lg text-justify">
-                I'm a self-taught full stack developer and highly passionate
-                about the tech field. I'm constantly trying to expand my skills
-                & stay up to date with upcoming and latest technologies.
-                Recently I'm trying to enhance my network and enjoy
-                collaboration work.
+                I'm a self-taught full-stack developer passionate about tech.
+                I’m constantly trying to expand my skills and stay updated with
+                emerging technologies. Recently, I’m focused on collaboration
+                and networking.
               </p>
             </div>
-            <div className="border-2 border-yellow-400 hover:border-blue-500 p-6 rounded-md h-full ">
+            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-6 rounded-md h-full ">
               <h2 className="mb-2 font-bold text-2xl">Tech Skills</h2>
               {[
                 { skill: "Next.js", level: "70%" },
@@ -101,7 +128,7 @@ const AboutDetails = () => {
                 { skill: "React Native", level: "40%" },
               ].map(({ skill, level }) => (
                 <div className="my-8" key={skill}>
-                  <h1 className="text-2xl md:text-[18px] uppercase text-cyan-400 font-extrabold animate-pulse mt-6 my-2">
+                  <h1 className="text-2xl uppercase text-cyan-400 font-extrabold animate-pulse my-2">
                     {skill}
                   </h1>
                   <div className="bg-cyan-200/20 h-4 rounded-full">
@@ -116,7 +143,7 @@ const AboutDetails = () => {
               ))}
             </div>
           </div>
-          <div className="border-2 border-yellow-400 hover:border-blue-500 p-6 rounded-md w-1/3">
+          <div className="border-[1px] border-yellow-400 shadow-lg shadow-blue-400 hover:border-blue-500 p-6 rounded-md w-1/3 ">
             <h2 className="mb-2 font-bold text-2xl">Education</h2>
             <ol className="relative border-s border-gray-200 dark:border-gray-700 mt-12">
               {[
@@ -143,40 +170,26 @@ const AboutDetails = () => {
                   description: "Completed at CBHSS Vallikkunnu.",
                 },
               ].map(({ title, time, description }, index) => (
-                <li
-                  key={index}
-                  className="mb-10 ms-6 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                    <svg
-                      className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                    </svg>
-                  </span>
-                  <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-                    {title}
-                  </h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                    {time}
-                  </time>
-                  <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                    {description}
-                  </p>
+                <li key={index} className="mb-10 ms-6 animate-fade-in-up">
+                  <span className="absolute w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 animate-bounce dark:bg-green-500"></span>
+                  <h3 className="text-lg font-semibold">{title}</h3>
+                  <time className="block text-sm text-gray-400">{time}</time>
+                  <p className="text-gray-500">{description}</p>
                 </li>
               ))}
             </ol>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md w-full mt-8 pb-12">
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="border-[1px] border-yellow-400 shadow-lg shadow-green-200 hover:border-blue-500 p-3 rounded-md w-full mt-8 pb-12"
+      >
         <TechStack />
-      </div>
+      </motion.div>
     </section>
   );
 };
