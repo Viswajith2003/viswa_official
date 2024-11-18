@@ -63,7 +63,7 @@ const techStack = [
 export default function TechStack() {
   return (
     <div className="mt-2">
-      <h2 className="text-2xl font-semibold text-center mb-6">Tech Stack</h2>
+      <h2 className="text-2xl font-bold text-center mb-6">Tech Stack</h2>
       <div className="overflow-hidden">
         <div className="flex animate-scroll gap-8">
           {techStack.map((tech, index) => (

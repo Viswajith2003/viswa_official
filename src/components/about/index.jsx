@@ -17,15 +17,21 @@ const AboutDetails = () => {
       <div className="flex space-x-6 w-full">
         {/* left part */}
         <div className="flex flex-col space-y-5 w-1/4">
-          <div className="mb-12">
+          <div className="mb-8">
             <img
               src="/profile.jpg" // Replace with the path to your profile photo
               alt="Profile photo"
               className="ml-10 w-72 h-72 rounded-full border-4 border-yellow-400 hover:border-blue-500 object-cover shadow-lg"
             />
           </div>
-          <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md">
-            <h1 className="text-2xl">Let's connect with:</h1>
+          <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md text-center">
+            <h2 className="text-2xl font-bold">Tech Enthusiast & Developer</h2>
+            <p className="text-slate-400 font-light text-md">
+              Excited about creating solutions and learning new technologies.
+            </p>
+          </div>
+          <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md h-full">
+            <h1 className="text-2xl font-bold">Let's connect with:</h1>
             <br />
             <div>
               <div className="items-center space-y-2">
@@ -73,9 +79,9 @@ const AboutDetails = () => {
         {/* right part */}
         <div className="flex flex-1 space-x-4">
           <div className="flex flex-col space-y-4 w-2/3">
-            <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md h-1/3">
+            <div className="border-2 border-yellow-400 hover:border-blue-500 p-5 rounded-md h-1/3">
               <h2 className="mb-2 font-bold text-2xl">README :</h2>
-              <p className="text-slate-400 font-light text-lg">
+              <p className="text-slate-400 font-light text-lg text-justify">
                 I'm a self-taught full stack developer and highly passionate
                 about the tech field. I'm constantly trying to expand my skills
                 & stay up to date with upcoming and latest technologies.
@@ -170,8 +176,7 @@ const AboutDetails = () => {
       </div>
       <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md w-full mt-8 pb-12">
         <TechStack />
-      </div> 
-      
+      </div>
     </section>
   );
 };
