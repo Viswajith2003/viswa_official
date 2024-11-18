@@ -1,5 +1,6 @@
 import React from "react";
 // import ItemLayout from "./ItemLayout";
+import TechStack from "./ItemLayout";
 import Link from "next/link";
 import {
   AiFillYoutube,
@@ -167,9 +168,10 @@ const AboutDetails = () => {
           </div>
         </div>
       </div>
-      <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md w-full mt-8 h-40">
-        <h4>Tech stack:</h4>
-      </div>
+      <div className="border-2 border-yellow-400 hover:border-blue-500 p-3 rounded-md w-full mt-8 pb-12">
+        <TechStack />
+      </div> 
+      
     </section>
   );
 };
