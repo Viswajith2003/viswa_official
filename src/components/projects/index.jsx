@@ -4,6 +4,7 @@ import { RiSearchLine } from "react-icons/ri";
 
 export default function ProjectList() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showMore, setShowMore] = useState(false);
   const projectData = [
     {
       id: 1,
@@ -47,13 +48,37 @@ export default function ProjectList() {
       image: "project.jpg",
       categories: ["React.js", "Next.js"],
     },
+    {
+      id: 7,
+      title: "project heading",
+      description: "short description",
+      image: "project.jpg",
+      categories: ["React.js", "Next.js"],
+      showMore: true,
+    },
+    {
+      id: 8,
+      title: "project heading",
+      description: "short description",
+      image: "project.jpg",
+      categories: ["React.js", "Next.js"],
+      showMore: true,
+    },
+    {
+      id: 9,
+      title: "project heading",
+      description: "short description",
+      image: "project.jpg",
+      categories: ["React.js", "Next.js"],
+      showMore: true,
+    },
   ];
 
   const filteredProjects = projectData.filter((project) =>
     activeCategory === "All"
       ? true
       : project.categories.includes(activeCategory)
-  );
+  ).filter((project) => (showMore ? true : !project.showMore));
 
   return (
     <div className="w-full border-[1px] border-white rounded-md h-auto p-8">
@@ -106,11 +131,15 @@ export default function ProjectList() {
           ))}
         </div>
         <div className="flex justify-center mt-8">
-          <button className="border-[1px] p-2 rounded-full text-white bg-transparent">
-            Show more
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="border-[1px] p-2 rounded-full text-white bg-transparent"
+          >
+            {showMore ? "Show less" : "Show more"}
           </button>
         </div>
       </div>
     </div>
   );
 }
+
