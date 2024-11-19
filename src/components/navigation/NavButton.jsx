@@ -4,11 +4,12 @@ import {
   Youtube,
   Linkedin,
   NotebookText,
-  Palette,
+  Code, // Replace Palette with Code icon
   Phone,
   Instagram,
   User,
 } from "lucide-react";
+
 import Link from "next/link";
 import React from "react";
 import ResponsiveComponent from "../ResponsiveComponent";
@@ -19,7 +20,7 @@ const getIcon = (icon) => {
   const icons = {
     home: <Home className="w-full h-auto" strokeWidth={1.5} />,
     about: <User className="w-full h-auto" strokeWidth={1.5} />,
-    projects: <Palette className="w-full h-auto" strokeWidth={1.5} />,
+    projects: <Code className="w-full h-auto" strokeWidth={1.5} />, // Updated to use Code icon
     contact: <Phone className="w-full h-auto" strokeWidth={1.5} />,
     github: <Github className="w-full h-auto" strokeWidth={1.5} />,
     linkedin: <Linkedin className="w-full h-auto" strokeWidth={1.5} />,
