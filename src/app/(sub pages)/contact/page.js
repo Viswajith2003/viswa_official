@@ -1,5 +1,3 @@
-import Image from "next/image";
-import bg from "../../../../public/background/contact-background.png";
 import Forms from "@/components/contact/Form";
 
 export const metadata = {

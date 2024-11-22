@@ -161,7 +161,7 @@ export default function ProjectList() {
                     Live view
                   </button>
                   <button className="border-[1px] p-2 rounded-full border-white text-white">
-                    View Source code
+                    Source code View
                   </button>
                 </div>
               </motion.div>
@@ -184,4 +184,3 @@ export default function ProjectList() {
     </div>
   );
 }
-
