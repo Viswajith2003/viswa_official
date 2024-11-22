@@ -10,37 +10,38 @@ export default function ProjectList() {
   const projectData = [
     {
       id: 1,
-      title: "project heading 1",
-      description: "short description",
-      image: "project.jpg",
+      title: "Blogging Website",
+      description:
+        "Web technologies include tools and techniques for developing websites and web applications.",
+      image: "./project/blog.png",
       categories: ["React.js"],
     },
     {
       id: 2,
-      title: "project heading 2",
-      description: "short description",
-      image: "project.jpg",
+      title: "Gym Website",
+      description: "A platform to manage gym schedules and track workouts.",
+      image: "./project/gym.jpg",
       categories: ["Next.js"],
     },
     {
       id: 3,
-      title: "project heading 3",
-      description: "short description",
-      image: "project.jpg",
+      title: "Netflix Clone",
+      description: "A clone of Netflix to stream videos online.",
+      image: "./project/netflix.jpg",
       categories: ["React-Native"],
     },
     {
       id: 4,
-      title: "project heading 4",
-      description: "short description",
-      image: "project.jpg",
+      title: "Travel Website",
+      description: "A website to book and explore travel destinations.",
+      image: "./project/travel.png",
       categories: ["React.js"],
     },
     {
       id: 5,
-      title: "project heading 5",
-      description: "short description",
-      image: "project.jpg",
+      title: "Weather App",
+      description: "A weather application to check current weather conditions.",
+      image: "./project/weather.png",
       categories: ["Next.js"],
     },
     {
@@ -142,7 +143,7 @@ export default function ProjectList() {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="card p-4 rounded-md space-y-3 border-[1px] border-yellow-400 bg-gray-800"
+                className="card p-4 rounded-md space-y-3 border-[1px] border-[#212c4c] bg-[#040d26]"
                 variants={hoverAnimation}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
