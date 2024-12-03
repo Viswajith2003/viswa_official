@@ -57,6 +57,7 @@ const AboutDetails = () => {
                   icon: AiOutlineMail,
                   text: "viswajithviswa715@gmail.com",
                   color: "text-blue-300",
+                  textSize: "text-sm",
                 },
                 {
                   href: "tel:+919072906576",
@@ -88,14 +89,15 @@ const AboutDetails = () => {
                   text: "viswajith2003",
                   color: "text-white",
                 },
-              ].map(({ href, icon: Icon, text, color }, index) => (
+              ].map(({ href, icon: Icon, text, color, textSize }, index) => (
                 <Link href={href} className="flex items-center" key={index}>
                   <Icon className={color + " text-2xl md:text-3xl"} />
                   <p
                     className={
-                      "text-sm md:text-xl ml-3 " +
+                      "ml-3 " +
                       color +
-                      " hover:text-cyan-400"
+                      " hover:text-cyan-400 " +
+                      (textSize || "")
                     }
                   >
                     {text}
@@ -121,7 +123,9 @@ const AboutDetails = () => {
                 I'm a self-taught full-stack developer passionate about tech.
                 I’m constantly trying to expand my skills and stay updated with
                 emerging technologies. Recently, I’m focused on collaboration
-                and networking.
+                and networking.I believe in continuous improvement, and my
+                ultimate goal is to bridge the gap between ideas and execution
+                by delivering reliable, efficient, and scalable solutions.
               </p>
             </div>
             <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
