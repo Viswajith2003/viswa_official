@@ -16,9 +16,9 @@ import {
 
 const AboutDetails = () => {
   return (
-    <section className="w-full m-8">
+    <section className="w-full p-4 md:p-8">
       <StarField />
-      <div className="flex space-x-6 w-full">
+      <div className="flex flex-col md:flex-row md:space-x-6 w-full">
         {/* Left part */}
         <motion.div
           initial={{ scale: 0 }}
@@ -26,25 +26,29 @@ const AboutDetails = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className={clsx(
-            "flex flex-col space-y-5 w-1/4",
+            "flex flex-col space-y-5 md:w-1/4",
             "border-[1px] border-yellow-400 hover:border-blue-500 p-5 rounded-md shadow-md shadow-blue-400"
           )}
         >
-          <div className="mb-8">
+          <div className="flex justify-center mb-8">
             <img
               src="/profile.jpg"
               alt="Profile photo"
-              className="ml-8 w-72 h-72 rounded-full border-4 border-white shadow-lg shadow-blue-400  hover:border-blue-500 object-cover "
+              className="w-36 h-36 md:w-72 md:h-72 rounded-full border-4 border-white shadow-lg shadow-blue-400 hover:border-blue-500 object-cover"
             />
           </div>
           <div className="mb-8 text-center">
-            <h2 className="text-2xl font-bold">Tech Enthusiast & Developer</h2>
-            <p className="text-slate-400 font-light text-md">
+            <h2 className="text-xl md:text-2xl font-bold">
+              Tech Enthusiast & Developer
+            </h2>
+            <p className="text-slate-400 font-light text-sm md:text-md">
               Excited about creating solutions and learning new technologies.
             </p>
           </div>
-          <div className="border-[1px]  border-yellow-400 shadow-blue-400 hover:border-blue-500 p-5 rounded-md h-full ">
-            <h1 className="text-2xl font-bold ">Let's connect with:</h1>
+          <div className="border-[1px] border-yellow-400 shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
+            <h1 className="text-xl md:text-2xl font-bold">
+              Let's connect with:
+            </h1>
             <br />
             <div className="items-center space-y-3 animate-pulse">
               {[
@@ -85,10 +89,14 @@ const AboutDetails = () => {
                   color: "text-white",
                 },
               ].map(({ href, icon: Icon, text, color }, index) => (
-                <Link href={href} className="flex" key={index}>
-                  <Icon className={color + " text-3xl"} />
+                <Link href={href} className="flex items-center" key={index}>
+                  <Icon className={color + " text-2xl md:text-3xl"} />
                   <p
-                    className={"text-xl ml-3 " + color + " hover:text-cyan-400"}
+                    className={
+                      "text-sm md:text-xl ml-3 " +
+                      color +
+                      " hover:text-cyan-400"
+                    }
                   >
                     {text}
                   </p>
@@ -104,20 +112,22 @@ const AboutDetails = () => {
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex flex-1 space-x-4"
+          className="flex flex-col md:flex-row md:space-x-4 flex-1 mt-6 md:mt-0"
         >
-          <div className="flex flex-col space-y-4 w-2/3">
-            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md h-1/3 ">
-              <h2 className="mb-2 font-bold text-2xl">README :</h2>
-              <p className="text-slate-400 font-light text-lg text-justify">
+          <div className="flex flex-col space-y-4 md:w-2/3">
+            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
+              <h2 className="mb-2 font-bold text-xl md:text-2xl">README :</h2>
+              <p className="text-slate-400 font-light text-sm md:text-lg text-justify">
                 I'm a self-taught full-stack developer passionate about tech.
                 I’m constantly trying to expand my skills and stay updated with
                 emerging technologies. Recently, I’m focused on collaboration
                 and networking.
               </p>
             </div>
-            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-6 rounded-md h-full ">
-              <h2 className="mb-2 font-bold text-2xl">Tech Skills</h2>
+            <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
+              <h2 className="mb-2 font-bold text-xl md:text-2xl">
+                Tech Skills
+              </h2>
               {[
                 { skill: "Next.js", level: "70%" },
                 { skill: "React.js", level: "85%" },
@@ -127,11 +137,11 @@ const AboutDetails = () => {
                 { skill: "MongoDB", level: "40%" },
                 { skill: "React Native", level: "40%" },
               ].map(({ skill, level }) => (
-                <div className="my-8" key={skill}>
-                  <h1 className="text-2xl uppercase text-cyan-400 font-extrabold animate-pulse my-2">
+                <div className="my-4" key={skill}>
+                  <h1 className="text-lg md:text-2xl uppercase text-cyan-400 font-extrabold animate-pulse my-2">
                     {skill}
                   </h1>
-                  <div className="bg-cyan-200/20 h-4 rounded-full">
+                  <div className="bg-cyan-200/20 h-3 md:h-4 rounded-full">
                     <div
                       className="bg-cyan-400 h-full text-xs flex justify-center items-center text-black font-bold rounded-full"
                       style={{ width: level }}
@@ -143,9 +153,9 @@ const AboutDetails = () => {
               ))}
             </div>
           </div>
-          <div className="border-[1px] border-yellow-400 shadow-lg shadow-blue-400 hover:border-blue-500 p-6 rounded-md w-1/3 ">
-            <h2 className="mb-2 font-bold text-2xl">Education</h2>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700 mt-12">
+          <div className="border-[1px] border-yellow-400 shadow-lg shadow-blue-400 hover:border-blue-500 p-5 rounded-md md:w-1/3">
+            <h2 className="mb-2 font-bold text-xl md:text-2xl">Education</h2>
+            <ol className="relative border-s border-gray-200 dark:border-gray-700 mt-6 md:mt-12">
               {[
                 {
                   title: "B-Tech in Computer Science",
@@ -170,11 +180,15 @@ const AboutDetails = () => {
                   description: "Completed at CBHSS Vallikkunnu.",
                 },
               ].map(({ title, time, description }, index) => (
-                <li key={index} className="mb-10 ms-6 animate-fade-in-up">
-                  <span className="absolute w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 animate-bounce dark:bg-green-500"></span>
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                  <time className="block text-sm text-gray-400">{time}</time>
-                  <p className="text-gray-500">{description}</p>
+                <li key={index} className="mb-10 ml-6 animate-fade-in-up">
+                  <span className="absolute w-4 h-4 bg-blue-100 rounded-full -start-3 ring-8 dark:ring-gray-900 ring-white animate-bounce dark:bg-green-500"></span>
+                  <h3 className="text-sm md:text-lg font-semibold">{title}</h3>
+                  <time className="block text-xs md:text-sm text-gray-400">
+                    {time}
+                  </time>
+                  <p className="text-xs md:text-sm text-gray-500">
+                    {description}
+                  </p>
                 </li>
               ))}
             </ol>

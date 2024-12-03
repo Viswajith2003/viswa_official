@@ -10,18 +10,23 @@ export default function ProjectList() {
   const projectData = [
     {
       id: 1,
-      title: "Blogging Website",
+      title: "CSE-dept website",
       description:
-        "Web technologies include tools and techniques for developing websites and web applications.",
-      image: "./project/blog.png",
-      categories: ["React.js"],
+        "A website for the Computer Science and Engineering department at GECPKD.",
+      image: "./project/cseWeb.png",
+      categories: ["Next.js"],
+      liveLink: "https://csegecskp.vercel.app/",
+      sourceCode: "https://github.com/CSEGECPKD/cse_dept_site",
     },
+    
     {
       id: 2,
       title: "Fitness Tracker",
       description: "A platform to manage gym schedules and track workouts.",
       image: "./project/gym.jpg",
       categories: ["Next.js"],
+      liveLink: "https://fitness-tracker-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Fitness-Tracker",
     },
     {
       id: 3,
@@ -29,6 +34,8 @@ export default function ProjectList() {
       description: "A clone of Netflix to stream videos online.",
       image: "./project/netflix.jpg",
       categories: ["React.js"],
+      liveLink: "https://netflix-clone-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Netflix-Clone",
     },
     {
       id: 4,
@@ -36,6 +43,19 @@ export default function ProjectList() {
       description: "A website to book and explore travel destinations.",
       image: "./project/travel.png",
       categories: ["React.js"],
+      liveLink: "https://travel-website-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Travel-Website",
+    },
+    
+    {
+      id: 6,
+      title: "Blogging Website",
+      description:
+        "Web technologies include tools and techniques for developing websites and web applications.",
+      image: "./project/blog.png",
+      categories: ["React.js"],
+      liveLink: "https://blogging-website-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Blogging-Website",
     },
     {
       id: 5,
@@ -43,36 +63,39 @@ export default function ProjectList() {
       description: "A weather application to check current weather conditions.",
       image: "./project/weather.png",
       categories: ["React.js"],
-    },
-    {
-      id: 6,
-      title: "CSE-dept website",
-      description: "short description",
-      image: "project.jpg",
-      categories: ["Next.js"],
+      liveLink: "https://weather-app-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Weather-App",
     },
     {
       id: 7,
       title: "QUOTE APP",
-      description: "short description",
-      image: "project.jpg",
+      description: "A simple app to generate random quotes.",
+      image: "./project/Quotes.png",
       categories: ["React.js"],
+      liveLink: "https://quote-app-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Quote-App",
       showMore: true,
     },
     {
       id: 8,
       title: "FOOD Delivery App",
-      description: "short description",
-      image: "project.jpg",
+      description:
+        "A food delivery application where users can order food from various restaurants.",
+      image: "./project/food.png",
       categories: ["Next.js"],
+      liveLink: "https://food-delivery-app-1.vercel.app/",
+      sourceCode: "https://github.com/Viswajith-VP/Food-Delivery-App",
       showMore: true,
     },
     {
       id: 9,
       title: "Music App",
-      description: "short description",
-      image: "project.jpg",
+      description: "A simple music player app.",
+      image: "./project/music.png",
       categories: ["React-Native"],
+      liveLink: "https://expo.dev/@viswajithvp/music-app",
+      sourceCode: "https://github.com/Viswajith-VP/Music-App",
+      showMore: true,
     },
   ];
 
@@ -157,10 +180,16 @@ export default function ProjectList() {
                   />
                 </div>
                 <div className="flex justify-between">
-                  <button className="border-[1px] p-2 rounded-full border-white text-white">
+                  <button
+                    onClick={() => window.open(project.liveLink, "_blank")}
+                    className="border-[1px] p-2 rounded-full border-white text-white"
+                  >
                     Live view
                   </button>
-                  <button className="border-[1px] p-2 rounded-full border-white text-white">
+                  <button
+                    onClick={() => window.open(project.sourceCode, "_blank")}
+                    className="border-[1px] p-2 rounded-full border-white text-white"
+                  >
                     Source code View
                   </button>
                 </div>
@@ -184,3 +213,5 @@ export default function ProjectList() {
     </div>
   );
 }
+
+
