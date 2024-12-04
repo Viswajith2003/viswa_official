@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { createPortal } from "react-dom";
 
 const Modal = ({ onClose, toggle }) => {
@@ -39,7 +39,8 @@ const Sound = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  const handleFirstUserInteraction = () => {
+  // Wrap the function in useCallback to avoid unnecessary re-creation
+  const handleFirstUserInteraction = useCallback(() => {
     const musicConsent = localStorage.getItem("musicConsent");
     if (musicConsent === "true" && !isPlaying) {
       audioRef.current.play();
@@ -49,7 +50,7 @@ const Sound = () => {
     ["click", "keydown", "touchstart"].forEach((event) =>
       document.removeEventListener(event, handleFirstUserInteraction)
     );
-  };
+  }, [isPlaying]);
 
   useEffect(() => {
     const consent = localStorage.getItem("musicConsent");
@@ -70,7 +71,7 @@ const Sound = () => {
     } else {
       setShowModal(true);
     }
-  }, []);
+  }, [handleFirstUserInteraction]); // Add handleFirstUserInteraction as a dependency
 
   const toggle = () => {
     const newState = !isPlaying;
@@ -80,6 +81,7 @@ const Sound = () => {
     localStorage.setItem("consentTime", new Date().toISOString());
     setShowModal(false);
   };
+
   return (
     <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
       {showModal && (
