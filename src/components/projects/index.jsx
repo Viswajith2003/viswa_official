@@ -82,7 +82,7 @@ export default function ProjectList() {
       description: "A simple app to generate random quotes.",
       image: "./project/Quotes.png",
       categories: ["React.js"],
-      liveLink: "https://quote-app-1.vercel.app/",
+      liveLink: "https://get-quote-app.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/GET_QUOTE_APP.git",
       // showMore: true,
     },
