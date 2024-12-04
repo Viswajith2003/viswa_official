@@ -14,7 +14,7 @@ export default function Home() {
       <div className="w-full h-screen absolute">
         <Navigation />
         <div className="flex flex-col justify-start md:justify-center items-center mt-[350px] md:mt-[350px] space-y-6">
-          <p className="md:text-3xl text-2xl ">Hi, I'm</p>
+          <p className="md:text-3xl text-2xl ">Hi, I&apos;m</p>
           <p className="md:text-8xl text-5xl font-bold">Viswajith.</p>
           <div className="flex space-x-3">
             <IoCodeSlashSharp className="text-[#2032ff] md:text-5xl text-2xl mt-1 md:mt-0" />
