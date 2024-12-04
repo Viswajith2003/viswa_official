@@ -19,7 +19,7 @@ export default function Home() {
             />
           </div>
           <h1 className="font-bold  text-5xl xs:text-5xl sm:text-3xl lg:text-8xl text-white mt-6">
-            About me
+            ABOUT ME
           </h1>
           <div className="animate-scroll flex items-center justify-center w-12 h-12 mt-8">
             <IoIosArrowDown className="text-foreground text-6xl" />

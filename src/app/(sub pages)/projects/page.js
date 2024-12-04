@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <h1 className="font-bold text-5xl xs:text-5xl sm:text-3xl lg:text-5xl text-white mb-20">
-        Projects
+        PROJECTS
       </h1>
       <ProjectList/>
       {/* <ProjectList projects={projectsData} /> */}
