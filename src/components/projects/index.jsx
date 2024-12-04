@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { RiSearchLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 
@@ -185,7 +186,7 @@ export default function ProjectList() {
                 <h1 className="text-3xl font-bold">{project.title}</h1>
                 <p className="text-slate-400">{project.description}</p>
                 <div className="w-full border-[1px] border-white h-44 rounded-md">
-                  <img
+                  <Image
                     src={project.image}
                     alt="project front page image"
                     className="w-full h-full object-cover"
