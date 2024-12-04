@@ -14,7 +14,7 @@ export default function ProjectList() {
       title: "CSE-Dept website",
       description:
         "A website for the Computer Science and Engineering department at GECPKD.",
-      image: "./project/cseWeb.png",
+      image: "/project/cseWeb.png",
       categories: ["Next.js"],
       liveLink: "https://csegecskp.vercel.app/",
       sourceCode: "https://github.com/CSEGECPKD/cse_dept_site",
@@ -24,7 +24,7 @@ export default function ProjectList() {
       title: "Alumni Website",
       description:
         "A website for the alumni for making interation between the alumni and the students.",
-      image: "./project/alumni.png",
+      image: "/project/alumni.png",
       categories: ["Next.js"],
       liveLink: "https://alumniweb-viswajith2003s-projects.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/Alumni_Website.git",
@@ -34,7 +34,7 @@ export default function ProjectList() {
       title: "Blogging Website",
       description:
         "Web technologies include tools and techniques for developing websites and web applications.",
-      image: "./project/blog.png",
+      image: "/project/blog.png",
       categories: ["React.js"],
       liveLink: "https://blog-website-xi-blush.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/Devscript-blog-web.git",
@@ -43,7 +43,7 @@ export default function ProjectList() {
       id: 4,
       title: "Travel Website",
       description: "A website to book and explore travel destinations.",
-      image: "./project/travel.png",
+      image: "/project/travel.png",
       categories: ["React.js"],
       liveLink: "https://travel-web-ten-coral.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/Travel_web.git",
@@ -52,7 +52,7 @@ export default function ProjectList() {
       id: 5,
       title: "Fitness Tracker",
       description: "A platform to manage gym schedules and track workouts.",
-      image: "./project/gym.jpg",
+      image: "/project/gym.jpg",
       categories: ["Next.js"],
       liveLink: "https://fitness-web-tau.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/fitness_web.git",
@@ -61,7 +61,7 @@ export default function ProjectList() {
       id: 6,
       title: "Netflix Clone",
       description: "A clone of Netflix to stream videos online.",
-      image: "./project/netflix.jpg",
+      image: "/project/netflix.jpg",
       categories: ["React.js"],
       liveLink: "https://netflix-clone-1.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/Netflix-UI-clone.git",
@@ -71,7 +71,7 @@ export default function ProjectList() {
       id: 7,
       title: "Weather App",
       description: "A weather application to check current weather conditions.",
-      image: "./project/weather.png",
+      image: "/project/weather.png",
       categories: ["React.js"],
       liveLink: "https://weather-app-two-gilt-56.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/WeatherApp.git",
@@ -81,7 +81,7 @@ export default function ProjectList() {
       id: 8,
       title: "QUOTE APP",
       description: "A simple app to generate random quotes.",
-      image: "./project/Quotes.png",
+      image: "/project/Quotes.png",
       categories: ["React.js"],
       liveLink: "https://get-quote-app.vercel.app/",
       sourceCode: "https://github.com/Viswajith2003/GET_QUOTE_APP.git",
@@ -92,7 +92,7 @@ export default function ProjectList() {
       title: "Food Delivery App",
       description:
         "A food delivery application where users can order food from various restaurants.",
-      image: "./project/food.png",
+      image: "/project/food.png",
       categories: ["Next.js"],
       liveLink: "https://food-delivery-app-1.vercel.app/",
       sourceCode: "https://github.com/Viswajith-VP/Food-Delivery-App",
@@ -102,7 +102,7 @@ export default function ProjectList() {
       id: 10,
       title: "Music App",
       description: "A simple music player app.",
-      image: "./project/music.png",
+      image: "/project/music.png",
       categories: ["React-Native"],
       liveLink: "https://expo.dev/@viswajithvp/music-app",
       sourceCode: "https://github.com/Viswajith-VP/Music-App",
@@ -188,6 +188,8 @@ export default function ProjectList() {
                 <div className="w-full border-[1px] border-white h-44 rounded-md">
                   <Image
                     src={project.image}
+                    width={500}
+                    height={300}
                     alt="project front page image"
                     className="w-full h-full object-cover"
                   />
@@ -226,4 +228,3 @@ export default function ProjectList() {
     </div>
   );
 }
-

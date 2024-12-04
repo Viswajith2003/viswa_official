@@ -27,7 +27,11 @@ const getIcon = (icon) => {
     instagram: <Instagram className="w-full h-auto" strokeWidth={1.5} />,
   };
 
-  return icons[icon] || <Home className="w-full h-auto text-[#30ff15]" strokeWidth={1.5} />;
+  return (
+    icons[icon] || (
+      <Home className="w-full h-auto text-[#30ff15]" strokeWidth={1.5} />
+    )
+  );
 };
 
 const item = {
@@ -71,7 +75,7 @@ const NavButton = ({
 
                 <span className=" peer text-[#33ff13] absolute top-0 left-0 w-full h-full" />
 
-                <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 text-[#33ff13] text-foreground text-sm rounded-md shadow-lg whitespace-nowrap">
+                <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 top-1/2 -translate-y-1/2 text-[#33ff13] text-sm rounded-md shadow-lg whitespace-nowrap">
                   {label}
                 </span>
               </span>
