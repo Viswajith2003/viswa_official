@@ -18,7 +18,7 @@ export default function ProjectList() {
       liveLink: "https://csegecskp.vercel.app/",
       sourceCode: "https://github.com/CSEGECPKD/cse_dept_site",
     },
-    
+
     {
       id: 2,
       title: "Fitness Tracker",
@@ -46,7 +46,7 @@ export default function ProjectList() {
       liveLink: "https://travel-website-1.vercel.app/",
       sourceCode: "https://github.com/Viswajith-VP/Travel-Website",
     },
-    
+
     {
       id: 6,
       title: "Blogging Website",
@@ -179,16 +179,16 @@ export default function ProjectList() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-10">
                   <button
                     onClick={() => window.open(project.liveLink, "_blank")}
-                    className="border-[1px] p-2 rounded-full border-white text-white"
+                    className="border-[1px] p-y-3 w-1/4 h-[45px] rounded-xl border-[#32ff12] hover:bg-[#32ff12] hover:text-black font-bold"
                   >
                     Live view
                   </button>
                   <button
                     onClick={() => window.open(project.sourceCode, "_blank")}
-                    className="border-[1px] p-2 rounded-full border-white text-white"
+                    className="border-[1px] w-2/5 h-[45px] p-y-3 rounded-xl border-[#32ff12] hover:bg-[#32ff12] hover:text-black font-bold"
                   >
                     Source code View
                   </button>
@@ -213,5 +213,3 @@ export default function ProjectList() {
     </div>
   );
 }
-
-
