@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import StarField from "../../components/starfield/StarField";
 import TechStack from "./ItemLayout";
 import Link from "next/link";
+import Image from "next/image";
 import {
   AiFillYoutube,
   AiFillInstagram,
@@ -31,10 +32,12 @@ const AboutDetails = () => {
           )}
         >
           <div className="flex justify-center mb-8">
-            <img
+            <Image
               src="/profile.jpg"
               alt="Profile photo"
               className="w-36 h-36 md:w-72 md:h-72 rounded-full border-4 border-white shadow-lg shadow-blue-400 hover:border-blue-500 object-cover"
+              width={288}
+              height={288}
             />
           </div>
           <div className="mb-8 text-center">
@@ -47,7 +50,7 @@ const AboutDetails = () => {
           </div>
           <div className="border-[1px] border-yellow-400 shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
             <h1 className="text-xl md:text-2xl font-bold">
-              Let's connect with:
+              Let&apos;s connect with:
             </h1>
             <br />
             <div className="items-center space-y-3 animate-pulse">
@@ -120,12 +123,13 @@ const AboutDetails = () => {
             <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
               <h2 className="mb-2 font-bold text-xl md:text-2xl">README :</h2>
               <p className="text-slate-400 font-light text-sm md:text-lg text-justify">
-                I'm a self-taught full-stack developer passionate about tech.
-                I’m constantly trying to expand my skills and stay updated with
-                emerging technologies. Recently, I’m focused on collaboration
-                and networking.I believe in continuous improvement, and my
-                ultimate goal is to bridge the gap between ideas and execution
-                by delivering reliable, efficient, and scalable solutions.
+                I&apos;m a self-taught full-stack developer passionate about
+                tech. I&apos;m constantly trying to expand my skills and stay
+                updated with emerging technologies. Recently, I&apos;m focused
+                on collaboration and networking. I believe in continuous
+                improvement, and my ultimate goal is to bridge the gap between
+                ideas and execution by delivering reliable, efficient, and
+                scalable solutions.
               </p>
             </div>
             <div className="border-[1px] border-yellow-400 shadow-md shadow-blue-400 hover:border-blue-500 p-5 rounded-md">
@@ -213,3 +217,4 @@ const AboutDetails = () => {
 };
 
 export default AboutDetails;
+
