@@ -17,11 +17,11 @@ export default function Home() {
           <p className="md:text-3xl text-2xl ">Hi, I'm</p>
           <p className="md:text-8xl text-5xl font-bold">Viswajith.</p>
           <div className="flex space-x-3">
-            <IoCodeSlashSharp className="text-blue-600 md:text-5xl text-2xl mt-1 md:mt-0" />
-            <div className="md:text-4xl text-2xl text-blue-600 md:mt-1 ">
+            <IoCodeSlashSharp className="text-[#2032ff] md:text-5xl text-2xl mt-1 md:mt-0" />
+            <div className="md:text-4xl text-2xl text-[#30ff15] md:mt-1 ">
               <Typewriter
                 options={{
-                  strings: ["Full-stack developer", "UI/UX designer", "Dancer"],
+                  strings: ["Full-stack developer", "Dancer", "UI/UX designer"],
                   autoStart: true,
                   loop: true,
                   delay: 75, // Speed of typing
